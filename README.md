@@ -1,9 +1,5 @@
 # contento_firebase
 
-## deploy functions
-
-`firebase deploy --only functions`
-
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -35,7 +31,69 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Building the Application
+
+To build your Next.js application for production:
+
+```bash
+# Build the application
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
+
+This will create a static export in the `out` directory as configured in `next.config.js`.
+
+## Testing
+
+To run tests for your application:
+
+```bash
+# Run tests
+npm test
+# or
+yarn test
+# or
+pnpm test
+```
+
+## Deployment
+
+### Deploy on Firebase
+
+This project is configured for Firebase deployment with static hosting:
+
+1. Make sure you have Firebase CLI installed:
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. Login to Firebase:
+   ```bash
+   firebase login
+   ```
+
+3. Build your Next.js application:
+   ```bash
+   npm run build
+   ```
+
+4. Deploy to Firebase Hosting:
+   ```bash
+   firebase deploy --only hosting
+   ```
+
+### Deploy Firebase Functions
+
+To deploy only the Firebase functions:
+
+```bash
+firebase deploy --only functions
+```
+
+### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
