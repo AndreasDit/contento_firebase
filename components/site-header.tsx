@@ -34,6 +34,19 @@ export function SiteHeader() {
                     <li>
                       <NavigationMenuLink asChild>
                         <Link
+                          href="/manage-tweets"
+                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        >
+                          <div className="text-sm font-medium leading-none">Manage Tweets</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Schedule and manage your tweets efficiently with our integrated system.
+                          </p>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link
                           href="/docs"
                           className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                         >
